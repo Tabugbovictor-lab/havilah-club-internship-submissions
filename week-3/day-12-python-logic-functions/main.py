@@ -28,26 +28,23 @@ def calculate_grade(score):
 # ── Function 2: Multiplication Table ─────────────────────────────────────────
 # Asks the user to enter a number and prints its full multiplication table (1-12).
 # Repeats until the user types 'quit'.
-
 def multiplication_table():
-    # TODO: implement loop and table logic
-    def generate multiplication_table(number):
-        for i in range(1, 13):
-            print(f"{number} x {i} = {number * i}")
-print("Enter a number to see its multiplication table (or type 'quit' to exit):")
-while True:
-        num = int(input("Enter a number to display its multiplication table: "))
-        
-        print(f"\nMultiplication Table for {num}:")
-        for i in range(1, 13):
-            print(f"{num} x {i} = {num * i}")
-            
+    """Exercise 2: Multiplication Table"""
+    while True:
+        try:
+            num = int(input("Enter a number to display its multiplication table: "))
+            print(f"\nMultiplication Table for {num}:")
+            for i in range(1, 13):
+                print(f"{num} x {i} = {num * i}")
+        except ValueError:
+            print("Invalid input! Please enter a valid integer.")
+            continue
+
         choice = input("\nWould you like to generate another table? (y/n): ").strip().lower()
         if choice != 'y':
             print("Exiting multiplication table generator.")
             break
-       # example usage:
-       generate_multiplication_table(5)  # Generates the multiplication table for 5
+        # Example usage: call multiplication_table() from the main menu.
 
 # ── Function 3: Your Choice ───────────────────────────────────────────────────
 # Define a third function of your choice — e.g. calculate_area(), convert_currency(),
