@@ -61,21 +61,20 @@ def your_function():
 
     #Exercise 4: Error Handling: Add `try` / `except` to handle cases where the user enters text instead of a number. 
     #TODO: implement error handling
-    def get_valid_number(prompt):
-        while True:
-            try:
-                return float(input(prompt))
-            except ValueError:
-                print("Invalid input. Please enter a valid number.")
-    def get_valid_integer(prompt):
-        while True:
-            try:
-                return int(input(prompt))
-            except ValueError:
-                print("Invalid input. Please enter a valid integer.")
-   #example usage:
-    number = get_valid_number("Enter a number: ")
-    print(f"You entered: {number}")                         
+    # Exercise 4: Error Handling
+def get_valid_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+def get_valid_integer(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")                 
 
 
 
